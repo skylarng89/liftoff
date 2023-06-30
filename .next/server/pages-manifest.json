@@ -1,0 +1,10 @@
+{
+  "/api/generate": "pages/api/generate.js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/api/blocked": "pages/api/blocked.js",
+  "/demo": "pages/demo.html",
+  "/api/transcribe": "pages/api/transcribe.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

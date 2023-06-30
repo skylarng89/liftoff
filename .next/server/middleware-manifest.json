@@ -1,0 +1,87 @@
+{
+  "sortedMiddleware": [
+    "/"
+  ],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/middleware.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/api\\/transcribe(.json)?[\\/#\\?]?$",
+          "originalSource": "/api/transcribe"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/api\\/generate(.json)?[\\/#\\?]?$",
+          "originalSource": "/api/generate"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    }
+  },
+  "functions": {
+    "/api/generate": {
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/pages/api/generate.js"
+      ],
+      "name": "pages/api/generate",
+      "page": "/api/generate",
+      "matchers": [
+        {
+          "regexp": "^/api/generate$",
+          "originalSource": "/api/generate"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    },
+    "/opengraph-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/opengraph-image/route.js"
+      ],
+      "name": "app/opengraph-image/route",
+      "page": "/opengraph-image/route",
+      "matchers": [
+        {
+          "regexp": "^/opengraph\\-image$",
+          "originalSource": "/opengraph-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_ef4866ecae192fd87727067cf2c0c0cf9fb8b020",
+          "filePath": "server/edge-chunks/wasm_ef4866ecae192fd87727067cf2c0c0cf9fb8b020.wasm"
+        },
+        {
+          "name": "wasm_a7e702bc5ba9227243abda7977c8096f59478d3f",
+          "filePath": "server/edge-chunks/wasm_a7e702bc5ba9227243abda7977c8096f59478d3f.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "Inter-SemiBold.2a2f0a2acb227a56.ttf",
+          "filePath": "server/edge-chunks/asset_Inter-SemiBold.2a2f0a2acb227a56.ttf"
+        },
+        {
+          "name": "apple-touch-icon.08850a16fd690728.png",
+          "filePath": "server/edge-chunks/asset_apple-touch-icon.08850a16fd690728.png"
+        },
+        {
+          "name": "noto-sans-v27-latin-regular.5dda3fca77107598.ttf",
+          "filePath": "server/edge-chunks/asset_noto-sans-v27-latin-regular.5dda3fca77107598.ttf"
+        }
+      ]
+    }
+  },
+  "version": 2
+}
